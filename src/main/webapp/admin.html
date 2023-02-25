@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FlyAway</title>
+</head>
+<body>
+
+<h1><b>FlyAway</b> Admin Access Portal </h1>
+<br>
+
+<h2>Add a flight to flightList</h2>
+<form action="save" method="post">
+From: <input type="text" name="From" placeholder="Enter a city"><br>
+To: <input type="text" name="To" placeholder="Enter a city"><br>
+Departure Time: <input type="time" name="Departure_Time" placeholder="Enter departure time"><br>
+Arrival Time: <input type="time" name="Arrival_Time" placeholder="Enter arrival time"><br>
+Price: <input type="number" name="Price" placeholder="Enter the price"><br>
+<input type="submit" value="Add">
+</form>
+<br><br>
++++++++++++++++++++++++++++++++++++++++++++++++++
+<br><br>
+
+<h2>Update a flight to flightList</h2>
+<form action="update" method="post">
+Flight ID: <input type="number" name="id" placeholder="Enter ID to update"><br>
+From: <input type="text" name="From" placeholder="Enter a city"><br>
+To: <input type="text" name="To" placeholder="Enter a city"><br>
+Departure Time: <input type="time" name="Departure_Time" placeholder="Enter departure time"><br>
+Arrival Time: <input type="time" name="Arrival_Time" placeholder="Enter arrival time"><br>
+Price: <input type="number" name="Price" placeholder="Enter the price"><br>
+<input type="submit" value="Update">
+</form>
+<br><br>
++++++++++++++++++++++++++++++++++++++++++++++++++
+<br><br>
+
+<h2>Update a flight to flightList</h2>
+<form action="delete" method="post">
+Flight ID: <input type="number" name="id" placeholder="Enter ID to delete"><br>
+<input type="submit" value="Delete">
+</form>
+<br><br>
++++++++++++++++++++++++++++++++++++++++++++++++++
+<br><br>
+
+<a href="fetch"><h2>See the list</h2></a>
+<br>
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+</body>
+</html>

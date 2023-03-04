@@ -34,7 +34,7 @@ public class LoginController extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		RequestDispatcher rd = null;
-		if(username.equalsIgnoreCase("sumit") && password.equals("shah")) {
+		if(username.equalsIgnoreCase("Admin") && password.equals("password")) {
 			rd = request.getRequestDispatcher("admin.html");
 			out.println("<center> <span style='color:red'> Welcome Admin, Login Successful!</span></center>");
 			rd.include(request, response);

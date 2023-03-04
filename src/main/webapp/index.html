@@ -6,14 +6,16 @@
 </head>
 <body>
 	<div align="center">
-		<h2>Login App Ver 1.0</h2>
-		<form action="CustomerInfo" method="post">
-			Origin: <input type="text" name="City"/><br/>
-			Destination: <input type="text" name="City"/><br/>	
-			Other things to add
+		<h1>FlyAway Flights</h1>
+		<form action="flightSearch" method="post"/>
+			Origin: <input type="text" name="originCity" placeholder="Enter origin city"/><br/>
+			Destination: <input type="text" name="destCity" placeholder="Enter destination city"/><br/>	
+			Date: <input type="date" name="date" placeholder="Enter date"/></br>
+			Passengers: <input type="number" name="numPassengers" placeholder="Enter number of passenger"/><br> 
 			<input type="submit" name="Search"/>	
 		</form>
 	</div>
+	
 	
 	<a href="login.html">Click here for admin login</a>
 	

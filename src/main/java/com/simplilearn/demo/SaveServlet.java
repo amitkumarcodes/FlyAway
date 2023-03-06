@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +29,7 @@ public class SaveServlet extends HttpServlet{
 		props.load(in);
 		Connection conn = DBConfig.getConnection(props);
 		resp.setContentType("text/html");
+		RequestDispatcher rd = null;
 		
 		PrintWriter out = resp.getWriter();
 		String from = req.getParameter("From");
@@ -51,6 +53,8 @@ public class SaveServlet extends HttpServlet{
 				if(rowsInserted > 0) {
 					System.out.println("A new flight has been added to the database.");
 					out.println("<center> <span style='color:red'><br><h3> A new flight has been added to the database <h3></span></center>");
+					rd = req.getRequestDispatcher("admin.html");
+					rd.include(req, resp);
 				}else {
 					out.print("<center> <span style='color:red'><br> Error! </span></center>");
 				}
